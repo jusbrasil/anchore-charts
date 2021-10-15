@@ -72,6 +72,9 @@ spec:
         {{- if .Values.cloudsql.enableIamLogin }}
         - "-enable_iam_login"
         {{- end }}
+        {{- if .Values.cloudsql.ipAddressTypes }}
+        - "-ip_address_types={{ .Values.cloudsql.ipAddressTypes }}"
+        {{- end }}
         {{- if .Values.cloudsql.useExistingServiceAcc }}
         - "-credential_file=/var/{{ .Values.cloudsql.serviceAccSecretName }}/{{ .Values.cloudsql.serviceAccJsonName }}"
         volumeMounts:

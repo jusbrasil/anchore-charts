@@ -43,6 +43,10 @@ cloudsql:
   instance: ""
   # Enables the proxy to use Cloud SQL IAM authentication
   # enableIamLogin: false
+
+  # Preferred IP types for connecting to CloudSQL instance
+  # ipAddressTypes: PUBLIC,PRIVATE
+
   # Optional existing service account secret to use.
   # useExistingServiceAcc: false
   # serviceAccSecretName: service_acc
